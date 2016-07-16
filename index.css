@@ -25,18 +25,16 @@ body {
   top: 50px;
   bottom: 0;
 }
-.multi #display-panel {
-  bottom: 150px;
-}
 
 #input-panel {
   position: absolute;
   width: 400px;
   top: 120px;
-  bottom: 0;
+  height: 85px;
 }
 .multi #input-panel {
-  height: 150px;
+  height: auto;
+  bottom: 0;
 }
 
 #topbar, #display-panel {
