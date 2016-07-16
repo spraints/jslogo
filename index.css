@@ -53,9 +53,8 @@ body {
 }
 #sidebar {
   position: absolute;
-  width: 400px;
-  top: 120px;
-  bottom: 0;
+  width: 1px; height: 1px;
+  bottom: 0; right: 0;
   overflow: hidden;
 }
 #sidebar-header, #sidebar, #input-panel {
