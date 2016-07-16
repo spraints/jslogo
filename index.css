@@ -23,7 +23,7 @@ body {
 #display-panel {
   position: absolute;
   top: 50px;
-  bottom: 65px;
+  bottom: 0;
 }
 .multi #display-panel {
   bottom: 150px;
@@ -31,17 +31,18 @@ body {
 
 #input-panel {
   position: absolute;
+  width: 400px;
+  top: 120px;
   bottom: 0;
-  height: 65px;
 }
 .multi #input-panel {
   height: 150px;
 }
 
-#topbar, #display-panel, #input-panel {
+#topbar, #display-panel {
   left: 0; right: 400px;
 }
-[dir=rtl] #topbar, [dir=rtl] #display-panel, [dir=rtl] #input-panel {
+[dir=rtl] #topbar, [dir=rtl] #display-panel {
   right: 0; left: 400px;
 }
 
@@ -59,10 +60,10 @@ body {
   bottom: 0;
   overflow: hidden;
 }
-#sidebar-header, #sidebar {
+#sidebar-header, #sidebar, #input-panel {
   left: auto; right: 0;
 }
-[dir=rtl] #sidebar-header, [dir=rtl] #sidebar {
+[dir=rtl] #sidebar-header, [dir=rtl] #sidebar, [dir=rtl] #input-panel {
   right: auto; left: 0;
 }
 
@@ -208,15 +209,15 @@ body {
 #input {
   position: absolute;
   overflow: hidden;
-  top: 5px; bottom: 10px;
+  top: 30px; bottom: 5px;
   border: 2px solid black;
   border-radius: 5px;
   color: black;
   background-color: white;
-  left: 10px; right: 85px;
+  left: 10px; right: 10px;
 }
 [dir=rtl] #input {
-  right: 10px; left: 85px;
+  right: 10px; left: 10px;
 }
 
 
@@ -279,35 +280,25 @@ body {
   -ms-user-select: none;
   user-select: none;
 
-  position: absolute;
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
 }
 
-#run, #stop {
-  top: 5px; bottom: 35px; width: 70px;
+#run, #stop, #clear {
+  position: absolute;
+  width: 185px;
+  top: 5px;
+  height: 19px;
 }
 
-#run, #stop {
-  top: 5px; bottom: 35px; width: 70px;
-}
+#run, #stop { left: 10px; right: auto; }
+#clear      { right: 10px; left: auto; }
 
 #run { display: block; }
 #stop { display: none; }
 .running #run { display: none; }
 .running #stop { display: block; }
-
-#clear {
-  height: 19px; bottom: 10px; width: 70px;
-}
-
-#run, #stop, #clear {
-  right: 5px; left: auto;
-}
-[dir=rtl] #run, [dir=rtl] #clear, [dir=rtl] #stop {
-  left: 5px; right: auto;
-}
 
 #run:hover, #clear:hover, #stop:hover {
   background-color: #eeeeee;
